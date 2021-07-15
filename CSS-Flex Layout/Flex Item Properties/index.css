@@ -1,0 +1,46 @@
+body{
+    margin: 0;
+}
+
+#container{
+    width: 100vw;
+    background-color: lightblue;
+    height: 400px;
+    box-sizing: border-box;
+    padding: 32px;
+    display: flex;
+}
+
+.item{
+    background-color: lightcoral;
+    margin-right: 16px;
+    margin-bottom: 16px;
+    padding: 32px;
+    font-size: 24px;
+    text-align: center;
+    flex-grow: 1;
+    /* Another properties are "flex-basis",  */
+}
+
+.item:nth-child(2){
+    background-color: bisque;
+    order: -1;
+    flex-grow: 2;
+}
+
+.item:nth-child(1){
+    background-color: lightcyan;
+    flex-grow: 0;
+    flex-shrink: 2;
+}
+
+/* let 2nd and 4th (even) element have different value */
+/* .item:nth-child(even){
+    background-color: bisque;
+    align-self: center;
+} */
+
+/* let 1st and 3rd (odd) element have different value  */
+/* .item:nth-child(odd){
+    align-self: flex-start;
+} */
